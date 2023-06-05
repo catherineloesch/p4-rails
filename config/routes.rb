@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   get "jobs", to: "jobs#all"
   get "jobs/:id", to: "jobs#one"
+  get "users/:id/jobs/:id", to: "jobs#show"
+
  
 
 
