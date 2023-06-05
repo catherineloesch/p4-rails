@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   include RackSessionFix
   protect_from_forgery with: :null_session
+  before_action :configure_sign_up_params, only: [:create]
   respond_to :json
   private
 
@@ -20,5 +21,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
       }, status: :unprocessable_entity
     end
   end
+
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:age, :description, :username, :address, :display_name])
+  end
+
 end
 

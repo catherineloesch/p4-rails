@@ -24,7 +24,9 @@ Rails.application.routes.draw do
 #   }
 
   resources :users do 
-    resources :jobs
+    resources :jobs do
+      resources :applications
+    end
   end
 
 

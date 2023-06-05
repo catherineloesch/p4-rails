@@ -1,24 +1,15 @@
-# README
+gihub repo: https://github.com/catherineloesch/p4-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## gems for authentication
 
-Things you may want to cover:
+- rack-cors
+- devise
+- devise-jwt
+- jsonapi-serializer
 
-* Ruby version
+## resources
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Dakota Lee Martinez
+  - https://dakotaleemartinez.com/tutorials/devise-jwt-api-only-mode-for-authentication/
+  - https://www.youtube.com/watch?v=wVNQwrALp1A
+  - https://github.com/DakotaLMartinez/rails-react-devise-tutorial
