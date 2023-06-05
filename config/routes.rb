@@ -23,11 +23,14 @@ Rails.application.routes.draw do
 #     }
 #   }
 
-  resources :users do 
-    resources :jobs do
-      resources :applications
-    end
-  end
+  # resources :users do 
+  #   resources :jobs do
+  #     resources :applications
+  #   end
+  # end
+
+  get "users", to: "users#all"
+  get "users/:id", to: "users#show"
 
 
   get "jobs", to: "jobs#all"
