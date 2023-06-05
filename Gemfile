@@ -47,7 +47,7 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
 
-# Use Sass to process CSS
+gem 'pg', '~> 1.5', '>= 1.5.3'# Use Sass to process CSS
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
