@@ -23,12 +23,6 @@ class JobsController < ApplicationController
       render json: @job
   end
 
-  # def new
-  #     @job = Job.new
-  #     render json: @job
-  # end
-
-
   def create
     @user = User.find(params[:user_id])
     @job = @user.jobs.create(job_params)
@@ -38,10 +32,6 @@ class JobsController < ApplicationController
       render json: @job.errors, status: :unprocessable_entity
     end
   end
-
-  # def edit
-  #     render json: @job
-  # end
 
   def update
       if @job.update(job_params)

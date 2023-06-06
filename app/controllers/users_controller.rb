@@ -10,41 +10,6 @@ class UsersController < ApplicationController
         @jobs = @user.jobs
         render json: @user
     end
-    
-    # def new
-    #     @user = User.new
-    #     render json: @user
-    # end
-
-
-    # Register new user
-    def create
-      @user = User.create(user_params)
-      if @user.valid?
-        token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token}
-      else
-        render json: @user.errors.map { |error| error.full_message}
-      end
-    end
-    # Log in existing userf
-    def login
-      @user = User.find_by(username: params[:username])
-      if @user && @user.authenticate(params[:password])
-        token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token}
-      else
-        render json: {error: "Invalid username or password"}
-      end
-    end
-    def auto_login
-      render json: @user
-    end
-
-
-    # def edit
-    #     render json: @user
-    # end
 
     def update
         if @user.update(user_params)
