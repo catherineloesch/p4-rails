@@ -11,6 +11,13 @@ class CurrentUserController < ApplicationController
 
   end
 
+
+  def jobs
+    @user = get_user_from_token
+    render json: @user.jobs
+
+  end
+
   private
 
   def get_user_from_token

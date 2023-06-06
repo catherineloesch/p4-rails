@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   },
   controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
   }
 
 # POST requests for users must be in the format:
@@ -23,21 +23,17 @@ Rails.application.routes.draw do
 #     }
 #   }
 
-  # resources :users do 
-  #   resources :jobs do
-  #     resources :applications
-  #   end
-  # end
+  resources :users do 
+    resources :jobs do
+      resources :applications
+    end
+  end
 
-  get "users", to: "users#all"
-  get "users/:id", to: "users#show"
-
+  # get "users/:user_id/jobs/:id", to: "jobs#show"
+  # get "users/:user_id/jobs", to: "jobs#index"
+  # post "users/:user_id/jobs", to: "jobs#create"
 
   get "jobs", to: "jobs#all"
   get "jobs/:id", to: "jobs#one"
-  get "users/:id/jobs/:id", to: "jobs#show"
-
- 
-
 
 end
