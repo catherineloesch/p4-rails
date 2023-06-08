@@ -25,7 +25,6 @@ Rails.application.routes.draw do
 
   resources :users do 
     resources :jobs do
-      resources :applications
     end
   end
 
@@ -35,5 +34,6 @@ Rails.application.routes.draw do
 
   get "jobs", to: "jobs#all"
   get "jobs/:id", to: "jobs#one"
+  get "jobs/:id/applications", to: "applications#index"
 
 end
