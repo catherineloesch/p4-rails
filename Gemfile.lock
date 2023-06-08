@@ -230,12 +230,12 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jsonapi-serializer
-  pg (~> 1.5, >= 1.5.3)
+  pg
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.5)
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data
