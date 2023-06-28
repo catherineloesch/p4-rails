@@ -20,11 +20,11 @@
 A fully responsive full-stack job-board application, built from scratch in 10 days using a rails API as its back end and a react-based front end. This solo project was the fourth and final application built as part of the curriculum for the General Assembly Software Engineering Immersive Course.
 Featuring freelance jobs posted by pet owners, the application enables users to make an account and post job listings looking for dog-walkers or pet sitters. Once logged in they can view their listings as well as edit and delete them. They can also update their account information and delete their account.
 
- <img src="./src/assets/readme_images/landing_page1.jpg">
- <img src="./src/assets/readme_images/landing_page2.jpg">
- <img src="./src/assets/readme_images/jobs.jpg">
+ <img src="./assets/readme_images/landing_page1.jpg">
+ <img src="./assets/readme_images/landing_page2.jpg">
+ <img src="./assets/readme_images/jobs.jpg">
 
-<img src="./src/assets/readme_images/landing_page_responsive.jpg" height=400px><img src="./src/assets/readme_images/responsive_services.jpg" height=400px><img src="./src/assets/readme_images/jobs_resp.jpg" height=400px>
+<img src="./assets/readme_images/landing_page_responsive.jpg" height=400px><img src="./assets/readme_images/responsive_services.jpg" height=400px><img src="./assets/readme_images/jobs_resp.jpg" height=400px>
 
 ## <a name="deployment-links"></a> 2. Deployment Links
 
@@ -193,7 +193,7 @@ rails new p4-rails --api
 
 ### Propsal: ERD
 
-<img src="./src/assets/readme_images/project_4_erd.png">
+<img src="./assets/readme_images/project_4_erd.png">
 
 <br>
 
@@ -212,7 +212,7 @@ rails new p4-rails --api
 
 ### Proposal: Wireframe
 
- <img src="./src/assets/readme_images/project_4_wireframe.png">
+ <img src="./assets/readme_images/project_4_wireframe.png">
 
 ### Proposal: choice of technology stack
 
@@ -526,15 +526,15 @@ I also spent some time trying to install [Material UI](https://mui.com/), an ope
 
 On the fifth day of development I tackled the styling of the website, starting with the header and the navigation bar. I used media queries to make the navigation menu easy to navigate from different screen sizes.
 
-<img src="./src/assets/readme_images/navbar_large_screen.jpg" >
+<img src="./assets/readme_images/navbar_large_screen.jpg" >
 
-<img src="./src/assets/readme_images/navbar_medium_screen.jpg" width=65%>
+<img src="./assets/readme_images/navbar_medium_screen.jpg" width=65%>
 
-<img src="./src/assets/readme_images/navbar_small_screen.jpg" width=40%>
+<img src="./assets/readme_images/navbar_small_screen.jpg" width=40%>
 
-<img src="./src/assets/readme_images/navbar_mobile.jpg" width=30%>
+<img src="./assets/readme_images/navbar_mobile.jpg" width=30%>
 
-<img src="./src/assets/readme_images/mobile_menu.jpg" width=30%>
+<img src="./assets/readme_images/mobile_menu.jpg" width=30%>
 
 <br>
 
@@ -542,18 +542,18 @@ Next, I added styling to the `<form>` elements. I started with the form that all
 
 <br>
 
-<img src="./src/assets/readme_images/new_job_form.jpg" width=45%><img src="./src/assets/readme_images/new_job_form_mobile.jpg" width=40%>
+<img src="./assets/readme_images/new_job_form.jpg" width=45%><img src="./assets/readme_images/new_job_form_mobile.jpg" width=40%>
 
 I chose to use a dropdown menu rather than a simple text field for the user to specify the job type. For the start date and the end date of the job I wanted the user to be able to select the date from a dropdown calendar. For this, I used the [React Date Picker](https://www.npmjs.com/package/react-datepicker) component.
 
-<img src="./src/assets/readme_images/job_type_dropdown.jpg" width=39.5%><img src="./src/assets/readme_images/datepicker.jpg" width=31%>
+<img src="./assets/readme_images/job_type_dropdown.jpg" width=39.5%><img src="./assets/readme_images/datepicker.jpg" width=31%>
 
 ### Development: day 6 - 05/06/2023
 
 On day 6 I added styling to the login and signup forms, again writing several media queries for each form to make sure they are easy to navigate on different screen sizes.
 
-<img src="./src/assets/readme_images/signup.jpg" width=45%><img src="./src/assets/readme_images/login.jpg" width=45%>
-<img src="./src/assets/readme_images/signup_ipad.jpg" width=30%><img src="./src/assets/readme_images/login_ipad.jpg" width=30%><img src="./src/assets/readme_images/signup_mobile.jpg" width=19.9%><img src="./src/assets/readme_images/login_mobile.jpg" width=20%>
+<img src="./assets/readme_images/signup.jpg" width=45%><img src="./assets/readme_images/login.jpg" width=45%>
+<img src="./assets/readme_images/signup_ipad.jpg" width=30%><img src="./assets/readme_images/login_ipad.jpg" width=30%><img src="./assets/readme_images/signup_mobile.jpg" width=19.9%><img src="./assets/readme_images/login_mobile.jpg" width=20%>
 
 After verifying that a user can sign up/log in with a token being issued, I moved on to the issue of checking whether or not a token is expired.
 As a first step, I wrote a function that decodes the token and extracts the data that contains the expiration date. I achieved this using the [Buffer library](https://vinod827.medium.com/decoding-a-jwt-token-in-nodejs-b8d5d079dea7).
@@ -613,25 +613,25 @@ I incorporated the `authenticateUser` function for all the protected routes i.e.
 
 On day 7, I worked on styling the landing page as well as the page that displays all the job postings. I made a reusable card component for each job record, along with media queries to ensure a responsive layout.
 
-<img src="./src/assets/readme_images/jobs_full_screen.jpg">
-<img src="./src/assets/readme_images/jobs_ipad.jpg" width=35%><img src="./src/assets/readme_images/jobs_mobile.jpg" width=21.5%>
+<img src="./assets/readme_images/jobs_full_screen.jpg">
+<img src="./assets/readme_images/jobs_ipad.jpg" width=35%><img src="./assets/readme_images/jobs_mobile.jpg" width=21.5%>
 
 ### Development: day 8 - 08/06/2023
 
 On day 8 I tackled the deployment of the front end on [Netlify](http://www.netlify.com/). I also added styling to the dashboard page, including media queries to make the page responsive.
 
-<img src="./src/assets/readme_images/dashboard_full_screen.jpg">
+<img src="./assets/readme_images/dashboard_full_screen.jpg">
 
-<img src="./src/assets/readme_images/dashboard_ipad.jpg" width=32%>
-<img src="./src/assets/readme_images/mobile_dashboard.jpg" width=20%>
+<img src="./assets/readme_images/dashboard_ipad.jpg" width=32%>
+<img src="./assets/readme_images/mobile_dashboard.jpg" width=20%>
 
 ### Development: day 9 - 08/06/2023
 
 On day 9, I styled the form that allows the user to edit job postings on the front end alongside some media queries, following the same pattern I used for the form that allows the user to create a new job:
 
-<img src="./src/assets/readme_images/edit_job.jpg" width=40%>
+<img src="./assets/readme_images/edit_job.jpg" width=40%>
 
-<img src="./src/assets/readme_images/edit_job_ipad.jpg" width=32%><img src="./src/assets/readme_images/edit_job_mobile.jpg" width=20%>
+<img src="./assets/readme_images/edit_job_ipad.jpg" width=32%><img src="./assets/readme_images/edit_job_mobile.jpg" width=20%>
 
 After I finished the styling for the project, I finally created some seed data for the rails api.
 
