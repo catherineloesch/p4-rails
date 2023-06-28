@@ -28,10 +28,8 @@ Featuring freelance jobs posted by pet owners, the application enables users to 
 
 ## <a name="deployment-links"></a> 2. Deployment Links
 
-- Front end: React application deployed on [Netlify](http://www.netlify.com/)
-
-  - Deployment: https://pawneepets.netlify.app/
-
+- Back end: rails application deployed on [Heroku](http://www.heroku.com/)
+  - Deployment: https://p4-rails.herokuapp.com
 - Front end: react application deployed on [Netlify](http://www.netlify.com/)
   - Deployment: https://pawneepets.netlify.app/
   - Front end GitHub repository: https://github.com/katieloesch/project4-react-frontend
@@ -100,7 +98,7 @@ npx create-react-app project4-react-frontend
 ### Back End
 
 - The back end is based on ruby (v3.2.2) and rails (v7.0.5)
-  - it was created using the 'rails new' command with '--api' flag as rails was only used for the backend API rather a full-stack application
+  - it was created using the 'rails new' command with '--api' flag as rails was only used for the back end API rather a full-stack application
   - https://guides.rubyonrails.org/api_app.html
 
 ```zsh
@@ -180,7 +178,7 @@ rails new p4-rails --api
 
 - the deliverables for this project were issued on: 26/05/2023
 
-  - a project proposal was to be submitted and approved by the instructional team before moving on to coding phase of the project
+  - a project proposal was to be submitted and approved by the instructional team before moving to coding phase of the project
   - the proposal was to include:
     - a description of the project
     - an ERD of models (Entity relationship diagram)
@@ -218,7 +216,7 @@ rails new p4-rails --api
 
 ### Proposal: choice of technology stack
 
-- I dediced to use a rails API with a React front end as I had used these two technologies before separately but not combined.
+- I decided to use a rails API with a React front end as I had used these two technologies before separately but not combined.
 
 ### Proposal: submission
 
@@ -227,10 +225,10 @@ rails new p4-rails --api
 
 ### Development: day 1 - 31/05/2023
 
-I started the development process by writing the code for the backend models: the User and Job models.
+I started the development process by writing the code for the back end models: the User and Job models.
 When I originally generated these models I did so without implementing authentication.
 After some research I realised that when using the devise package for authentication, it is more straightforward to generate the User model with devise.
-Since I was still early in the back end development process, I decided to start the back end from scratch. Thus, I generated the User model with devise, following along the steps listed in the [documumentation by Dakota Lee Martinez](https://dakotaleemartinez.com/tutorials/devise-jwt-api-only-mode-for-authentication/). This documentation recommends installing the following gems:
+Since I was still early in the back end development process, I decided to start the back end from scratch. Thus, I generated the User model with devise, following along the steps listed in the [documentation by Dakota Lee Martinez](https://dakotaleemartinez.com/tutorials/devise-jwt-api-only-mode-for-authentication/). This documentation recommends installing the following gems:
 
 - rack-cors
 - devise
@@ -450,8 +448,8 @@ end
 
 I tested all the different routes in [Postman](https://www.postman.com/), making sure that:
 
-- sending a POST request to the '/signup' endpoint creates new user and generates a token, along with a 'Sign up successful. New user created.' message
-- sending a POST request to the '/login' endpoint logs the user in and generates a token, along with a 'User logged in sucessfully.' message
+- sending a POST request to the '/signup' endpoint creates a new user and generates a token, along with a 'Sign up successful. New user created.' message
+- sending a POST request to the '/login' endpoint logs the user in and generates a token, along with a 'User logged in successfully.' message
 - sending a GET request to the '/current_user' endpoint with a valid token verifies the token and returns the data for the user associated with the token
 - sending a DELETE request to the '/logout' endpoint logs the user out and returns a "User logged out successfully." message
 - all CRUD actions defined in the JobsController work as expected
@@ -464,7 +462,7 @@ After deploying the back end, I focused on the front end and initialised a new R
 npx create-react-app project4-react-frontend
 ```
 
-I removed all the unncessary boilerplate files that come with a default application and started building the basic folder structure for the front end.
+I removed all the unnecessary boilerplate files that come with a default application and started building the basic folder structure for the front end.
 
 ### Development: day 3 - 02/06/2023
 
@@ -515,18 +513,18 @@ When no user is logged in, it should display the 'Sign Up' and 'Log In' buttons.
     (userLoggedIn && <Link to="/" className='nav-link'><div onClick={handleLogOut}>Log Out</div></Link>)
 ```
 
-I also made sure that I was able to display data from the backend on the front end, starting with the job resource, first making sure that I could display jobs from the database on the front end and then adding forms to add, edit and delete jobs on the front end.
+I also made sure that I was able to display data from the back end on the front end, starting with the job resource, first making sure that I could display jobs from the database on the front end and then adding forms to add, edit and delete jobs on the front end.
 
 ### Development: day 4 - 03/06/2023
 
 Continuing where I had left off the day before, on day 4 I added more forms to the front end and made sure that the sign up and log in features worked for the User model.
 I then proceeded to add the features for updating user information and deleting a user.
 
-I also spent some time trying to install [Material UI](https://mui.com/), an open-source framework for React components. However, I ran into some issues as the it didn't seem compatible with the version of React that I was using (v18.2.0). Rather than downgrading to an older version of React, I decided to do the styling in vanilla CSS instead of using a framework. I also added two custom fonts to the front end, [Lilly](https://www.fontsquirrel.com/fonts/lilly) and [Quicksand](https://en.bestfonts.pro/font/quicksand).
+I also spent some time trying to install [Material UI](https://mui.com/), an open-source framework for React components. However, I ran into some issues as it didn't seem compatible with the version of React that I was using (v18.2.0). Rather than downgrading to an older version of React, I decided to do the styling in vanilla CSS instead of using a framework. I also added two custom fonts to the front end, [Lilly](https://www.fontsquirrel.com/fonts/lilly) and [Quicksand](https://en.bestfonts.pro/font/quicksand).
 
 ### Development: day 5 - 04/06/2023
 
-On the fifth day of development I tackled the styling of the website, starting with the header and the navigation bar. I used media queries to make the nagivation menu easy to navigate from different screen sizes.
+On the fifth day of development I tackled the styling of the website, starting with the header and the navigation bar. I used media queries to make the navigation menu easy to navigate from different screen sizes.
 
 <img src="./src/assets/readme_images/navbar_large_screen.jpg" >
 
@@ -546,7 +544,7 @@ Next, I added styling to the `<form>` elements. I started with the form that all
 
 <img src="./src/assets/readme_images/new_job_form.jpg" width=45%><img src="./src/assets/readme_images/new_job_form_mobile.jpg" width=40%>
 
-I chose to use a dropdown menu rather than a simple text field for the user to specify the job type. For the start date and the end date of the job I wanted the user to be able to select the date from a dropdown calendar. For this used the [React Date Picker](https://www.npmjs.com/package/react-datepicker) component.
+I chose to use a dropdown menu rather than a simple text field for the user to specify the job type. For the start date and the end date of the job I wanted the user to be able to select the date from a dropdown calendar. For this, I used the [React Date Picker](https://www.npmjs.com/package/react-datepicker) component.
 
 <img src="./src/assets/readme_images/job_type_dropdown.jpg" width=39.5%><img src="./src/assets/readme_images/datepicker.jpg" width=31%>
 
@@ -557,7 +555,7 @@ On day 6 I added styling to the login and signup forms, again writing several me
 <img src="./src/assets/readme_images/signup.jpg" width=45%><img src="./src/assets/readme_images/login.jpg" width=45%>
 <img src="./src/assets/readme_images/signup_ipad.jpg" width=30%><img src="./src/assets/readme_images/login_ipad.jpg" width=30%><img src="./src/assets/readme_images/signup_mobile.jpg" width=19.9%><img src="./src/assets/readme_images/login_mobile.jpg" width=20%>
 
-After verifying that a user can sign up/log in with a token being issued, I moved on to issue of checking whether or not a token is expired.
+After verifying that a user can sign up/log in with a token being issued, I moved on to the issue of checking whether or not a token is expired.
 As a first step, I wrote a function that decodes the token and extracts the data that contains the expiration date. I achieved this using the [Buffer library](https://vinod827.medium.com/decoding-a-jwt-token-in-nodejs-b8d5d079dea7).
 
 ```JavaScript
@@ -569,7 +567,7 @@ const decodeToken = (token) => {
 }
 ```
 
-The next step was to check the expiration date against the current date. If the expiration date is less than the current date, the token is expired and authentication fails. If the expiration date is greater than the current date, authentication is successful.
+The next step was to check the expiration date against the current date. If the expiration date is less than the current date, the token has expired and authentication fails. If the expiration date is greater than the current date, authentication is successful.
 
 ```Javascript
 const checkTokenExp = (token_exp) => {
@@ -613,7 +611,7 @@ I incorporated the `authenticateUser` function for all the protected routes i.e.
 
 ### Development: day 7 - 06/06/2023
 
-On day 7, I woked on styling the landing page as well as the page that displays all the job postings. I made a reusable card component for each job record, along with media queries to ensure a responsive layout.
+On day 7, I worked on styling the landing page as well as the page that displays all the job postings. I made a reusable card component for each job record, along with media queries to ensure a responsive layout.
 
 <img src="./src/assets/readme_images/jobs_full_screen.jpg">
 <img src="./src/assets/readme_images/jobs_ipad.jpg" width=35%><img src="./src/assets/readme_images/jobs_mobile.jpg" width=21.5%>
@@ -644,7 +642,7 @@ On the final day of this project I added content to the readme document and pres
 ## 7. <a name="challenges"></a> Challenges
 
 - deployment on the front end on Netlify proved to be a challenge as there were issues with the fetch requests not working properly.
-- I originally created the backend with a sqlite database instead of postgresql and had to later account for that during deployment, which made things more complicated.
+- I originally created the back end with a sqlite database instead of postgresql and had to later account for that during deployment, which made things more complicated.
 - the react-datepicker component I used formatted the date in a different way than the rails datetime format, which required writing some extra code to account for this inconsistency.
 - the [documentation](https://dakotaleemartinez.com/tutorials/devise-jwt-api-only-mode-for-authentication/) I followed to set up devise authentication contained a couple of typos which I only noticed after copying some of the commands to the CLI, which resulted in several error messages.
 
@@ -656,8 +654,8 @@ On the final day of this project I added content to the readme document and pres
 
 ## <a name="takeaways"></a> 9. Key Learnings & Takeaways
 
-- It is useful to think about how to implement authentication before generating a User model in the backend.
-- Using CSS variables are save a lot of time when programmming in vanilla CSS.
+- It is useful to think about how to implement authentication before generating a User model in the back end.
+- Using CSS variables saves a lot of time when programmming in vanilla CSS.
 - It is easier to implement a responsive design as you do the styling of different elements rather than leaving it until the final stages of development.
 - Always check for typos before copying and pasting commands to the CLI.
 
