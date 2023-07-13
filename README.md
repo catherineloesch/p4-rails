@@ -28,11 +28,10 @@ Featuring freelance jobs posted by pet owners, the application enables users to 
 
 ## <a name="deployment-links"></a> 2. Deployment Links
 
-- Back end: rails application deployed on [Heroku](http://www.heroku.com/)
-  - Deployment: https://p4-rails.herokuapp.com
-- Front end: react application deployed on [Netlify](http://www.netlify.com/)
-  - Deployment: https://pawneepets.netlify.app/
-  - Front end GitHub repository: https://github.com/katieloesch/project4-react-frontend
+- Back end rails application deployed on [Heroku](http://www.heroku.com/): https://p4-rails.herokuapp.com
+
+- Front end repository: https://github.com/katieloesch/project4-react-frontend
+  - Front end deployment: pawnee-pets.katieloesch.co.uk
 
 ## <a name="installation"></a> 3. Installation
 
